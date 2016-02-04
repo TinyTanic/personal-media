@@ -5,8 +5,5 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('film/film');
 });
-console.log('---------------------');
-console.log(__dirname);
-console.log('---------------------');
 
 module.exports = router;
