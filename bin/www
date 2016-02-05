@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('personal-media:server');
 var http = require('http');
+var express = require('express');
 
 /**
  * Get port from environment and store in Express.
@@ -88,3 +89,6 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+app.use(express.static('public'));
+app.use(express.static('node_modules'));

@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 hbs.registerPartials(path.join(__dirname, 'partials'));
 
 app.use('/', require(path.join(__dirname, 'home')));
+app.use('/film/', require(path.join(__dirname, 'film')));
 // app.use('/users', users);
 
 // catch 404 and forward to error handler
