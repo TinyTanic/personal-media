@@ -1,26 +1,32 @@
-{{#each film}}
-<div class="card">
-   <div class="blurring dimmable image">
-      <div class="ui dimmer">
-         <div class="content">
-            <div class="center">
-               <div class="ui inverted button">Guarda</div>
+{{#each films}}
+   <div class="card">
+      <div class="blurring dimmable image">
+         <div class="ui dimmer">
+            <div class="content">
+               <div class="center">
+                  <div class="ui inverted button">Guarda</div>
+               </div>
             </div>
          </div>
+         <img src="{{posterChooser Poster}}">
       </div>
-      <img src="{{image}}">
-   </div>
-   <div class="content">
-      <a class="header">{{title}}</a>
-      <div class="meta">
-         <span class="date">{{genre}}</span>
+      <div class="content">
+         <a class="header">{{Title}}</a>
+         <div class="meta">
+            <span class="date">{{Genre}}</span>
+         </div>
       </div>
-   </div>
-   <div class="extra content">
-      <span class="right floated star">
+      <div class="extra content">
+         <span class="right floated star">
         <i class="star icon"></i>
         Preferito
      </span>
+      </div>
    </div>
-</div>
+   <script>
+      Handlebars.registerHelper('posterChooser', function(filmPoster) {
+         if (filmPoster == 'N/A') return 'images/na.jpg';
+         return filmPoster;
+      });
+   </script>
 {{/each}}

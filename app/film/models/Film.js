@@ -4,9 +4,8 @@ var sequelize = require('../../db');
 var File = require('../../library/models/File');
 
 var model = {
-   title: {
-      type: Sequelize.STRING,
-      field: 'Title'
+   Title: {
+      type: Sequelize.STRING
    },
    Year: {
       type: Sequelize.INTEGER
