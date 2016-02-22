@@ -1,9 +1,9 @@
 var express = require('express');
 var Film = require('./models/Film');
-var Handlebars = require('handlebars');
+var hbs = require('hbs');
 var router = express.Router();
 
-Handlebars.registerHelper('posterChooser', function(filmPoster) {
+hbs.registerHelper('posterChooser', function(filmPoster) {
   if(filmPoster == 'N/A') return 'images/na.jpg';
   return filmPoster;
 });
