@@ -9,10 +9,10 @@ hbs.registerHelper('posterChooser', function(filmPoster) {
 });
 
 
-Film.findAll().then(function(films){
-   router.get('/', function(req, res, next) {
-      res.render('film/film', {films: films});
-   });
+router.get('/', function(req, res, next) {
+  Film.findAll().then(function(films){
+    res.render('sections/film/film', {films: films});
+  });
 });
 
 

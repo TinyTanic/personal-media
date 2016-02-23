@@ -6,13 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var sequelize = require('./db');
-var Song = require('./music/models/Song');
-var Song = require('./film/models/Film');
+var sections = require('./sections');
+// var Song = require('./music/models/Song');
+// var Song = require('./film/models/Film');
 
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 
 var app = express();
+
+sections.loadSection('film');
+app = sections.mount(app);
 
 // view engine setup
 app.set('views', __dirname);
@@ -29,16 +33,16 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 hbs.registerPartials(path.join(__dirname, 'partials'));
 
-app.use('/', require(path.join(__dirname, 'home')));
-app.use('/film/', require(path.join(__dirname, 'film')));
+// app.use('/', require(path.join(__dirname, 'home')));
+// app.use('/film/', require(path.join(__dirname, 'film')));
 // app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+// app.use(function(req, res, next) {
+//   var err = new Error('Not Found');
+//   err.status = 404;
+//   next(err);
+// });
 
 // error handlers
 

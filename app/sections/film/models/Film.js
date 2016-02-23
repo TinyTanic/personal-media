@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
-var sequelize = require('../../db');
+var sequelize = require('../../../db');
 
-var File = require('../../library/models/File');
+var File = require('../../../library/models/File');
 
 var model = {
    Title: {
