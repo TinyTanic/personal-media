@@ -1,18 +1,22 @@
-var crawler = require('./crawler');
-var fs = require('fs');
-var Film = require('./app/film/models/Film')
+// var crawler = require('./crawler');
+// var fs = require('fs');
+// var Film = require('./app/film/models/Film')
+//
+// var fs = require('fs');
+var dirScanner = require('./bin/dirScanner')
 
-var fs = require('fs');
+dirScanner.scan('./files_container')
 
-Film.findAll().then(function(films) {
-   fs.writeFile("./resp", JSON.stringify(films), function(err) {
-      if (err) {
-         return console.log(err);
-      }
-      
-   });
 
-});
+// Film.findAll().then(function(films) {
+//    fs.writeFile("./resp", JSON.stringify(films), function(err) {
+//       if (err) {
+//          return console.log(err);
+//       }
+//
+//    });
+//
+// });
 
 
 
