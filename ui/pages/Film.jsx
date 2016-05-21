@@ -5,7 +5,7 @@ var Film = React.createClass({
    render() {
       return (
          <div className="film-page">
-            { 'ciao' }
+            {'ciao'}
          </div>
       );
    }
