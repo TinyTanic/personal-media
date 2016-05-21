@@ -1,0 +1,27 @@
+{
+  "name": "personal-media",
+  "version": "1.0.0",
+  "description": "Access to your media everywhere in the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punch92/personal-media.git"
+  },
+  "author": "Aguzzoli Luca, Barbetti Luca, Casula Roberto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/punch92/personal-media/issues"
+  },
+  "homepage": "https://github.com/punch92/personal-media#readme",
+  "dependencies": {
+    "hapi": "^13.4.0",
+    "inert": "^4.0.0",
+    "react": "^15.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0"
+  }
+}
